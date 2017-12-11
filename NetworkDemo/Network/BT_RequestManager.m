@@ -95,7 +95,9 @@ static NSString *_HostUrl = nil;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager shareInstance];
     BTSessionTask *sessionTask = nil;
     [manager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull afFormData) {
-        [afFormData appendPartWithFileData:formData.fileData name:formData.name fileName:formData.fileName mimeType:formData.mimeType];
+        if (formData) {        
+            [afFormData appendPartWithFileData:formData.fileData name:formData.name fileName:formData.fileName mimeType:formData.mimeType];
+        }
     } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(task, responseObject);

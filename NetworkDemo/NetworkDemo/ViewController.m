@@ -11,6 +11,24 @@
 #import "NSObject+BTRequest.h"
 #import "BT_BaseRequestGroup.h"
 
+
+@interface BTFormData : NSObject <BT_MultipartFormData>
+
+@end
+@implementation BTFormData
+- (NSData *)fileData {
+    return nil;
+}
+- (NSString *)name {
+    return nil;
+}
+- (NSString *)fileName {
+    return nil;
+}
+- (NSString *)mimeType {
+    return nil;
+}
+@end
 @interface ViewController ()
 
 @end
@@ -67,13 +85,16 @@
 - (void)singleRequest {
     
     // 请求
-    NSString *url = @"http://116.211.167.106/api/live/aggregation";
-    NSDictionary *param = @{@"uid":@"133825214",
-                             @"interest":@"1",
-                             @"count":@(20)};
+    NSString *url = @"http://www.f2b2b.com/ecmobile/index.php?url=/user/signin";
+    NSDictionary *param = @{@"name":@"18510060862", @"password":@"123456"};
+    
+    NSString *string = [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:param options:0 error:nil] encoding:NSUTF8StringEncoding];
+    NSDictionary *params = @{@"json":string};
     self.CANCEL(url);
-    [self.GET(url).PARAM(param) SEND:^(BT_BaseResponse *response) {
-        
+    [self.POST(url).PARAM(params).FORMDATA(nil) SEND:^(BT_BaseResponse *response) {
+        if (response.statusCode == 200) {
+            NSLog(@"wancheng");
+        }
     }];
     
 }
