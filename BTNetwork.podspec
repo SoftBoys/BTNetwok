@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   # s.tvos.deployment_target = "9.0"
 
 
-  s.source       = { :git => "https://github.com/SoftBoys/BTNetwok.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/SoftBoys/BTNetwok.git", :tag => "v#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
