@@ -9,7 +9,7 @@
 #import "NSObject+BTRequest.h"
 
 @implementation NSObject (BTRequest)
-/** tag 1.0.6 */
+/** tag 1.0.7 */
 - (MessageSendHandle)GET {
     MessageSendHandle handle = ^BTMessage * (NSString *url) {
         return [self sendMessage:url type:BTRequestGET];
