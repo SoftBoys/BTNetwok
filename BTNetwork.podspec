@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BTNetwork"
-  s.version      = "0.0.3"
+  s.version      = "1.0.5"
   s.summary      = "一款基于AFNetworking的以block调用形式的网络请求框架"
 
   # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
 
   s.license      = "MIT"
-  s.author       = { "郭俊威" => "gjw_1991@163.com" }
+  s.author       = { "gjw" => "gjw_1991@163.com" }
   s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
