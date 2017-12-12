@@ -22,6 +22,12 @@
     };
     return handle;
 }
+- (MessageSendHandle)POST_FORM {
+    MessageSendHandle handle = ^BTMessage * (NSString *url) {
+        return [self sendMessage:url type:BTRequestMultipartPOST];
+    };
+    return handle;
+}
 - (BTMessage *)sendMessage:(NSString *)url type:(BTRequestType)type {
     BTMessage *message = [BTMessage new];
     message.request.url = url;
@@ -57,7 +63,6 @@
 - (MessageFormDataHandle)FORMDATA {
     MessageFormDataHandle handle = ^BTMessage * (id<BT_MultipartFormData> formData) {
         self.request.formData = formData;
-        self.request.requestType = BTRequestMultipartPOST;
         return self;
     };
     return handle;

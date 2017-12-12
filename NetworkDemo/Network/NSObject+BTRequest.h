@@ -19,8 +19,9 @@ typedef BTMessage* (^MessageFormDataHandle)(id<BT_MultipartFormData> formData);
 @interface NSObject (BTRequest)
 @property (nonatomic, copy, readonly) MessageSendHandle GET;
 @property (nonatomic, copy, readonly) MessageSendHandle POST;
+@property (nonatomic, copy, readonly) MessageSendHandle POST_FORM;
 
-@property (nonatomic, strong, readonly) MessageCancelHandle CANCEL;
+@property (nonatomic, copy, readonly) MessageCancelHandle CANCEL;
 @end
 
 @interface BTMessage : NSObject

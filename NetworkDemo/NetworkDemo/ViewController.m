@@ -70,7 +70,7 @@
     BT_BaseRequest *request3 = [BT_BaseRequest requestWithUrl:url3];
     request3.parameters = param3;
     
-    BT_BaseRequestGroup *group = [BT_BaseRequestGroup alloc];
+    BT_BaseRequestGroup *group = [[BT_BaseRequestGroup alloc] init];
     [group sendRequestGroup:@[request1, request2, request3] singleCompletion:^(BT_BaseRequest *request) {
         NSLog(@"========BEGIN========");
         NSLog(@"url:%@", request.url);
@@ -91,7 +91,7 @@
     NSString *string = [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:param options:0 error:nil] encoding:NSUTF8StringEncoding];
     NSDictionary *params = @{@"json":string};
     self.CANCEL(url);
-    [self.POST(url).PARAM(params).FORMDATA(nil) SEND:^(BT_BaseResponse *response) {
+    [self.POST_FORM(url).PARAM(params) SEND:^(BT_BaseResponse *response) {
         if (response.statusCode == 200) {
             NSLog(@"wancheng");
         }
