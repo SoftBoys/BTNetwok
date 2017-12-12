@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BTNetwork"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "一款基于AFNetworking的以block调用形式的网络请求框架"
 
   # This description is used to generate tags and improve search results.
@@ -11,14 +11,14 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "支持队列组请求"
+  s.description  = "一款基于AFNetworking的以block调用形式的网络请求框架,支持队列组请求"
 
-  s.homepage     = "https://github.com/SoftBoys"
+  s.homepage     = "https://github.com/SoftBoys/BTNetwok"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
-  s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "郭俊威" => "gjw_1991@163.com" }
+  s.license      = "MIT"
+  s.author       = { "郭俊威" => "gjw_1991@163.com" }
   s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
