@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BTNetwork"
-  s.version      = "1.0.1"
+  s.version      = "1.0.0"
   s.summary      = "一款基于AFNetworking的以block调用形式的网络请求框架"
 
   # This description is used to generate tags and improve search results.
