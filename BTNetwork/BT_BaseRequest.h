@@ -38,4 +38,5 @@ typedef void(^BTResponseCompletionBlock)(BT_BaseResponse *response);
 - (void)cancel;
 
 @property (nonatomic, strong, readonly) BT_BaseResponse *response;
+
 @end
