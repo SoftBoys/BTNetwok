@@ -8,7 +8,6 @@
 
 #import "NSObject+BTRequest.h"
 
-
 @implementation NSObject (BTRequest)
 
 - (MessageSendHandle)GET {
