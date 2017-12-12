@@ -14,11 +14,11 @@
 		E98849AB1FDE63DF0041E0CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98849AA1FDE63DF0041E0CC /* Assets.xcassets */; };
 		E98849AE1FDE63DF0041E0CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98849AC1FDE63DF0041E0CC /* LaunchScreen.storyboard */; };
 		E98849B11FDE63DF0041E0CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E98849B01FDE63DF0041E0CC /* main.m */; };
-		E98849C61FDE673D0041E0CC /* BT_RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E98849C51FDE673D0041E0CC /* BT_RequestManager.m */; };
-		E98849C91FDE674D0041E0CC /* BT_BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E98849C81FDE674D0041E0CC /* BT_BaseRequest.m */; };
-		E98849CC1FDE675E0041E0CC /* BT_BaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E98849CB1FDE675E0041E0CC /* BT_BaseResponse.m */; };
-		E98849D21FDE67950041E0CC /* BT_BaseRequestGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E98849D11FDE67950041E0CC /* BT_BaseRequestGroup.m */; };
-		E98849D51FDE6FFB0041E0CC /* NSObject+BTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E98849D41FDE6FFB0041E0CC /* NSObject+BTRequest.m */; };
+		E98849E31FDF71770041E0CC /* NSObject+BTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E98849D91FDF71770041E0CC /* NSObject+BTRequest.m */; };
+		E98849E41FDF71770041E0CC /* BT_BaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E98849DC1FDF71770041E0CC /* BT_BaseResponse.m */; };
+		E98849E51FDF71770041E0CC /* BT_BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E98849DF1FDF71770041E0CC /* BT_BaseRequest.m */; };
+		E98849E61FDF71770041E0CC /* BT_RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E98849E01FDF71770041E0CC /* BT_RequestManager.m */; };
+		E98849E71FDF71770041E0CC /* BT_BaseRequestGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E98849E21FDF71770041E0CC /* BT_BaseRequestGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,17 +35,17 @@
 		E98849AD1FDE63DF0041E0CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E98849AF1FDE63DF0041E0CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E98849B01FDE63DF0041E0CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E98849C41FDE673D0041E0CC /* BT_RequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BT_RequestManager.h; sourceTree = "<group>"; };
-		E98849C51FDE673D0041E0CC /* BT_RequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BT_RequestManager.m; sourceTree = "<group>"; };
-		E98849C71FDE674D0041E0CC /* BT_BaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BT_BaseRequest.h; sourceTree = "<group>"; };
-		E98849C81FDE674D0041E0CC /* BT_BaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BT_BaseRequest.m; sourceTree = "<group>"; };
-		E98849CA1FDE675E0041E0CC /* BT_BaseResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BT_BaseResponse.h; sourceTree = "<group>"; };
-		E98849CB1FDE675E0041E0CC /* BT_BaseResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BT_BaseResponse.m; sourceTree = "<group>"; };
-		E98849D01FDE67950041E0CC /* BT_BaseRequestGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BT_BaseRequestGroup.h; sourceTree = "<group>"; };
-		E98849D11FDE67950041E0CC /* BT_BaseRequestGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BT_BaseRequestGroup.m; sourceTree = "<group>"; };
-		E98849D31FDE6FFB0041E0CC /* NSObject+BTRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+BTRequest.h"; sourceTree = "<group>"; };
-		E98849D41FDE6FFB0041E0CC /* NSObject+BTRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BTRequest.m"; sourceTree = "<group>"; };
-		E98849D61FDE7B710041E0CC /* BT_MultipartFormData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BT_MultipartFormData.h; sourceTree = "<group>"; };
+		E98849D81FDF71770041E0CC /* BT_BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BT_BaseRequest.h; sourceTree = "<group>"; };
+		E98849D91FDF71770041E0CC /* NSObject+BTRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BTRequest.m"; sourceTree = "<group>"; };
+		E98849DA1FDF71770041E0CC /* BT_RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BT_RequestManager.h; sourceTree = "<group>"; };
+		E98849DB1FDF71770041E0CC /* BT_BaseRequestGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BT_BaseRequestGroup.h; sourceTree = "<group>"; };
+		E98849DC1FDF71770041E0CC /* BT_BaseResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BT_BaseResponse.m; sourceTree = "<group>"; };
+		E98849DD1FDF71770041E0CC /* BT_MultipartFormData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BT_MultipartFormData.h; sourceTree = "<group>"; };
+		E98849DE1FDF71770041E0CC /* NSObject+BTRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BTRequest.h"; sourceTree = "<group>"; };
+		E98849DF1FDF71770041E0CC /* BT_BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BT_BaseRequest.m; sourceTree = "<group>"; };
+		E98849E01FDF71770041E0CC /* BT_RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BT_RequestManager.m; sourceTree = "<group>"; };
+		E98849E11FDF71770041E0CC /* BT_BaseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BT_BaseResponse.h; sourceTree = "<group>"; };
+		E98849E21FDF71770041E0CC /* BT_BaseRequestGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BT_BaseRequestGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 		E98849951FDE63DF0041E0CC = {
 			isa = PBXGroup;
 			children = (
-				E98849B71FDE64000041E0CC /* Network */,
+				E98849D71FDF71770041E0CC /* BTNetwork */,
 				E98849A01FDE63DF0041E0CC /* NetworkDemo */,
 				E988499F1FDE63DF0041E0CC /* Products */,
 				EDB5157F5EFCEA2232970B8B /* Pods */,
@@ -103,22 +103,23 @@
 			path = NetworkDemo;
 			sourceTree = "<group>";
 		};
-		E98849B71FDE64000041E0CC /* Network */ = {
+		E98849D71FDF71770041E0CC /* BTNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				E98849C41FDE673D0041E0CC /* BT_RequestManager.h */,
-				E98849C51FDE673D0041E0CC /* BT_RequestManager.m */,
-				E98849D61FDE7B710041E0CC /* BT_MultipartFormData.h */,
-				E98849C71FDE674D0041E0CC /* BT_BaseRequest.h */,
-				E98849C81FDE674D0041E0CC /* BT_BaseRequest.m */,
-				E98849CA1FDE675E0041E0CC /* BT_BaseResponse.h */,
-				E98849CB1FDE675E0041E0CC /* BT_BaseResponse.m */,
-				E98849D01FDE67950041E0CC /* BT_BaseRequestGroup.h */,
-				E98849D11FDE67950041E0CC /* BT_BaseRequestGroup.m */,
-				E98849D31FDE6FFB0041E0CC /* NSObject+BTRequest.h */,
-				E98849D41FDE6FFB0041E0CC /* NSObject+BTRequest.m */,
+				E98849D81FDF71770041E0CC /* BT_BaseRequest.h */,
+				E98849DF1FDF71770041E0CC /* BT_BaseRequest.m */,
+				E98849DA1FDF71770041E0CC /* BT_RequestManager.h */,
+				E98849E01FDF71770041E0CC /* BT_RequestManager.m */,
+				E98849DB1FDF71770041E0CC /* BT_BaseRequestGroup.h */,
+				E98849E21FDF71770041E0CC /* BT_BaseRequestGroup.m */,
+				E98849E11FDF71770041E0CC /* BT_BaseResponse.h */,
+				E98849DC1FDF71770041E0CC /* BT_BaseResponse.m */,
+				E98849DD1FDF71770041E0CC /* BT_MultipartFormData.h */,
+				E98849DE1FDF71770041E0CC /* NSObject+BTRequest.h */,
+				E98849D91FDF71770041E0CC /* NSObject+BTRequest.m */,
 			);
-			path = Network;
+			name = BTNetwork;
+			path = ../BTNetwork;
 			sourceTree = "<group>";
 		};
 		EDB5157F5EFCEA2232970B8B /* Pods */ = {
@@ -256,14 +257,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E98849E41FDF71770041E0CC /* BT_BaseResponse.m in Sources */,
 				E98849A61FDE63DF0041E0CC /* ViewController.m in Sources */,
-				E98849D51FDE6FFB0041E0CC /* NSObject+BTRequest.m in Sources */,
-				E98849CC1FDE675E0041E0CC /* BT_BaseResponse.m in Sources */,
+				E98849E31FDF71770041E0CC /* NSObject+BTRequest.m in Sources */,
 				E98849B11FDE63DF0041E0CC /* main.m in Sources */,
+				E98849E51FDF71770041E0CC /* BT_BaseRequest.m in Sources */,
+				E98849E61FDF71770041E0CC /* BT_RequestManager.m in Sources */,
+				E98849E71FDF71770041E0CC /* BT_BaseRequestGroup.m in Sources */,
 				E98849A31FDE63DF0041E0CC /* AppDelegate.m in Sources */,
-				E98849C61FDE673D0041E0CC /* BT_RequestManager.m in Sources */,
-				E98849C91FDE674D0041E0CC /* BT_BaseRequest.m in Sources */,
-				E98849D21FDE67950041E0CC /* BT_BaseRequestGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
