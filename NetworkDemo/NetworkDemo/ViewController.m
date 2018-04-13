@@ -10,6 +10,7 @@
 
 #import "NSObject+BTRequest.h"
 #import "BT_BaseRequestGroup.h"
+#import "BT_RequestManager.h"
 
 
 @interface BTFormData : NSObject <BT_MultipartFormData>
@@ -41,7 +42,7 @@
     // 多个请求
     [self requestWithGroup];
     
-    [self singleRequest];
+//    [self singleRequest];
     
 }
 - (void)requestWithGroup {
@@ -76,7 +77,7 @@
         NSLog(@"url:%@", request.url);
         NSLog(@"statusCode:%@", @(request.response.statusCode));
         NSLog(@"========END========");
-    } completed:^{
+    } completion:^{
         NSLog(@"completion");
     }];
     
@@ -91,7 +92,8 @@
     NSString *string = [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:param options:0 error:nil] encoding:NSUTF8StringEncoding];
     NSDictionary *params = @{@"json":string};
     self.CANCEL(url);
-    [self.POST_FORM(url).PARAM(params) SEND:^(BT_BaseResponse *response) {
+    
+    [BT_RequestManager UPLOAD:url parameters:params formData:nil progress:nil completion:^(BT_BaseResponse *response) {
         if (response.statusCode == 200) {
             NSLog(@"wancheng");
         }

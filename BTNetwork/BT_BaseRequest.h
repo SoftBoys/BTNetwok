@@ -7,17 +7,15 @@
 //  
 
 #import <Foundation/Foundation.h>
-#import "BT_BaseResponse.h"
 #import "BT_MultipartFormData.h"
+#import "BT_BaseResponse.h"
 
 typedef NS_ENUM(NSUInteger, BTRequestType) {
-    BTRequestGET,
-    BTRequestPOST,
-    BTRequestMultipartPOST
+    BTRequestGET,       // GET请求
+    BTRequestPOST,      // POST请求
 };
 
 @class BT_BaseResponse;
-typedef void(^BTResponseCompletionBlock)(BT_BaseResponse *response);
 
 @interface BT_BaseRequest : NSObject
 
@@ -27,13 +25,11 @@ typedef void(^BTResponseCompletionBlock)(BT_BaseResponse *response);
 @property (nonatomic, copy) NSDictionary *parameters;
 /** 请求类型 */
 @property (nonatomic, assign) BTRequestType requestType;
-/** form 表单 参数 */
-@property (nonatomic, strong) id<BT_MultipartFormData> formData;
 
 /** 创建网络请求 */
 + (instancetype)requestWithUrl:(NSString *)url;
 + (instancetype)requestWithUrl:(NSString *)url requestType:(BTRequestType)requestType;
-- (void)sendWithCompleted:(BTResponseCompletionBlock)completed;
+- (void)sendWithCompletion:(void(^)(BT_BaseResponse *response))completion;
 
 - (void)cancel;
 

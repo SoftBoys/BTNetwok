@@ -12,14 +12,14 @@
 
 /** 响应码 */
 @property (nonatomic, assign) NSInteger statusCode;
+/** 响应头 */
+@property (nonatomic, strong) NSMutableDictionary *headers;
 /** 响应Data */
 @property (nonatomic, strong) NSData *responseData;
 /** 响应字符串 */
 @property (nonatomic, copy) NSString *responseString;
 /** JSON */
-@property (nonatomic, strong, readonly) id responseJSON;
+@property (nonatomic, strong) id responseJSON;
 @property (nonatomic, strong) NSError *error;
-
-- (instancetype)initWithStatusCode:(NSInteger)statusCode responseData:(NSData *)responseData responseString:(NSString *)responseString responseJSON:(id)responseJSON error:(NSError *)error;
 
 @end

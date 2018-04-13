@@ -19,7 +19,6 @@ typedef BTMessage* (^MessageFormDataHandle)(id<BT_MultipartFormData> formData);
 @interface NSObject (BTRequest)
 @property (nonatomic, copy, readonly) MessageSendHandle GET;
 @property (nonatomic, copy, readonly) MessageSendHandle POST;
-@property (nonatomic, copy, readonly) MessageSendHandle POST_FORM;
 
 @property (nonatomic, copy, readonly) MessageCancelHandle CANCEL;
 @end
@@ -30,8 +29,6 @@ typedef BTMessage* (^MessageFormDataHandle)(id<BT_MultipartFormData> formData);
 
 @property (nonatomic, copy, readonly) MessageParamsHandle PARAM;
 
-@property (nonatomic, strong, readonly) MessageFormDataHandle FORMDATA;
-
-- (void)SEND:(BTResponseCompletionBlock)completed;
+- (void)SEND:(void(^)(BT_BaseResponse *response))completion;
 
 @end

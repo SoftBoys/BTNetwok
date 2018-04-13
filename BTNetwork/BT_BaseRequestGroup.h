@@ -17,7 +17,7 @@ typedef void(^BTGroupCompletionBlock)(void);
 
 @property (nonatomic, copy) NSArray <BT_BaseRequest*> *groupArray;
 
-- (void)sendRequestGroup:(NSArray <BT_BaseRequest *>*)groupArray completed:(BTGroupCompletionBlock)completed;
-- (void)sendRequestGroup:(NSArray <BT_BaseRequest *>*)groupArray singleCompletion:(BTSingleRequestCompletionBlock)singleCompleted completed:(BTGroupCompletionBlock)completed;
+- (void)sendRequestGroup:(NSArray <BT_BaseRequest *>*)groupArray completion:(BTGroupCompletionBlock)completion;
+- (void)sendRequestGroup:(NSArray <BT_BaseRequest *>*)groupArray singleCompletion:(BTSingleRequestCompletionBlock)singleCompletion completion:(BTGroupCompletionBlock)completion;
 
 @end

@@ -22,12 +22,7 @@
     };
     return handle;
 }
-- (MessageSendHandle)POST_FORM {
-    MessageSendHandle handle = ^BTMessage * (NSString *url) {
-        return [self sendMessage:url type:BTRequestMultipartPOST];
-    };
-    return handle;
-}
+
 - (BTMessage *)sendMessage:(NSString *)url type:(BTRequestType)type {
     BTMessage *message = [BTMessage new];
     message.request.url = url;
@@ -60,15 +55,8 @@
     };
     return handle;
 }
-- (MessageFormDataHandle)FORMDATA {
-    MessageFormDataHandle handle = ^BTMessage * (id<BT_MultipartFormData> formData) {
-        self.request.formData = formData;
-        return self;
-    };
-    return handle;
-}
 
-- (void)SEND:(BTResponseCompletionBlock)completed {
-    [self.request sendWithCompleted:completed];
+- (void)SEND:(void (^)(BT_BaseResponse *))completion {
+    [self.request sendWithCompletion:completion];
 }
 @end
