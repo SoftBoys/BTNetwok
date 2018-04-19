@@ -17,8 +17,10 @@ typedef void(^BT_ResponseCompletionBlock)(BT_BaseResponse *response);
 @protocol BT_MultipartFormData;
 @interface BT_RequestManager : NSObject
 
-/** 配置请求头 */
-+ (void)setHostUrl:(NSString *)hostUrl;
+/** 配置BaseURL */
++ (void)setBaseURL:(NSString *)baseUrl;
+/** 配置HTTP请求头参数 */
++ (void)configHTTPHeaders:(NSDictionary *)httpHeaders;
 /**
  发起GET请求
  
@@ -60,7 +62,6 @@ typedef void(^BT_ResponseCompletionBlock)(BT_BaseResponse *response);
 + (void)cancelTask:(BTSessionTask *)task;
 + (void)cancelTaskId:(NSInteger)taskId;
 + (void)cancelAllTask;
-
 @end
 
 

@@ -45,4 +45,7 @@
 - (void)cancel {
     [BT_RequestManager cancelTaskWithUrl:self.url];
 }
+- (void)dealloc {
+//    NSLog(@"request[%@] is dealloc ...", self);
+}
 @end

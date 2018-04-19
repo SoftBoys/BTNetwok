@@ -12,8 +12,6 @@
 
 #import "BT_BaseResponse.h"
 
-static NSString *_HostUrl = nil;
-
 
 @interface AFHTTPSessionManager (Share)
 + (instancetype)shareInstance;
@@ -25,7 +23,7 @@ static NSString *_HostUrl = nil;
     static AFHTTPSessionManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:_HostUrl]];
+        manager = [[AFHTTPSessionManager alloc] initWithBaseURL:nil];
         
         manager.requestSerializer = [AFPropertyListRequestSerializer serializer];
         manager.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -34,6 +32,11 @@ static NSString *_HostUrl = nil;
         manager.requestSerializer.timeoutInterval = 30.0;
         
         manager.operationQueue.maxConcurrentOperationCount = 4;
+        
+        if ([manager.responseSerializer isKindOfClass:AFJSONResponseSerializer.class]) {
+            // 移除 NSNull 对象
+            [(AFJSONResponseSerializer *)manager.responseSerializer setRemovesKeysWithNullValues:YES];
+        }
         
         // 设置支持接收类型
         NSSet *contentTypes = [NSSet setWithArray:@[@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/*"]];
@@ -47,8 +50,21 @@ static NSString *_HostUrl = nil;
 
 @implementation BT_RequestManager
 
-+ (void)setHostUrl:(NSString *)hostUrl {
-    _HostUrl = hostUrl;
++ (void)setBaseURL:(NSString *)baseUrl {
+    if (baseUrl == nil) {
+        return;
+    }
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager shareInstance];
+    [manager setValue:[NSURL URLWithString:baseUrl] forKey:@"baseURL"];
+}
++ (void)configHTTPHeaders:(NSDictionary *)httpHeaders {
+    if ([httpHeaders allKeys].count == 0) {
+        return;
+    }
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager shareInstance];
+    for (NSString *header in httpHeaders) {
+        [manager.requestSerializer setValue:httpHeaders[header] forHTTPHeaderField:header];
+    }
 }
 #pragma mark -
 + (BTSessionTask *)GET:(NSString *)URLString parameters:(id)parameters completion:(BT_ResponseCompletionBlock)completion {

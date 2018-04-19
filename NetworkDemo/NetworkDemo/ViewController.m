@@ -71,6 +71,7 @@
     BT_BaseRequest *request3 = [BT_BaseRequest requestWithUrl:url3];
     request3.parameters = param3;
     
+//    [BT_RequestManager configHTTPHeaders:@{@"heard1":@"value1"}];
     BT_BaseRequestGroup *group = [[BT_BaseRequestGroup alloc] init];
     [group sendRequestGroup:@[request1, request2, request3] singleCompletion:^(BT_BaseRequest *request) {
         NSLog(@"========BEGIN========");
@@ -86,12 +87,15 @@
 - (void)singleRequest {
     
     // 请求
-    NSString *url = @"http://www.f2b2b.com/ecmobile/index.php?url=/user/signin";
+    NSString *host = @"http://www.f2b2b.com";
+    NSString *url = @"/ecmobile/index.php?url=/user/signin";
     NSDictionary *param = @{@"name":@"18510060862", @"password":@"123456"};
     
     NSString *string = [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:param options:0 error:nil] encoding:NSUTF8StringEncoding];
     NSDictionary *params = @{@"json":string};
+    
     self.CANCEL(url);
+    [BT_RequestManager setBaseURL:host];
     
     [BT_RequestManager UPLOAD:url parameters:params formData:nil progress:nil completion:^(BT_BaseResponse *response) {
         if (response.statusCode == 200) {
