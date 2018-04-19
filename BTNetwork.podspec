@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BTNetwork"
-  s.version      = "1.0.9"
+  s.version      = "1.1.0"
   s.summary      = "一款基于AFNetworking的以block调用形式的网络请求框架"
 # s.description  = "一款基于AFNetworking的以block调用形式的网络请求框架,支持队列组请求"
 
